@@ -6,13 +6,10 @@ body {
     color: #1c1c1e;
 }
 
-/* 新しく追加：固定フッターを持つページ用の設定 */
 body.has-fixed-footer {
-    /* 固定フッター分のスペースを確保 (80pxはフッターのおおよその高さ) */
     padding-bottom: 80px;
 }
 
-/* ヘッダー */
 header {
     background-color: #f8f8f8cc; /* 半透明の背景 */
     padding: 1rem;
@@ -37,7 +34,6 @@ h1 {
     font-size: 1rem;
 }
 
-/* メインコンテンツ */
 main {
     padding: 1rem;
 }
@@ -50,7 +46,6 @@ main {
     text-align: center;
 }
 
-/* リスト */
 .list {
     list-style-type: none;
     padding: 0;
@@ -84,7 +79,6 @@ main {
     font-weight: bold;
 }
 
-/* フッターとボタン（更新） */
 footer {
     position: fixed; /* 画面下部に固定 */
     bottom: 0;
