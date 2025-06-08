@@ -1,0 +1,17 @@
+{
+  "name": "男女平等アプリ",
+  "short_name": "男女平等",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#f0f0f0",
+  "theme_color": "#f8f8f8",
+  "description": "男女平等を実践するアプリです。",
+  "icons": [
+    {
+      "src": "images/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
