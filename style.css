@@ -6,6 +6,12 @@ body {
     color: #1c1c1e;
 }
 
+/* 新しく追加：固定フッターを持つページ用の設定 */
+body.has-fixed-footer {
+    /* 固定フッター分のスペースを確保 (80pxはフッターのおおよその高さ) */
+    padding-bottom: 80px;
+}
+
 /* ヘッダー */
 header {
     background-color: #f8f8f8cc; /* 半透明の背景 */
@@ -78,11 +84,24 @@ main {
     font-weight: bold;
 }
 
-/* フッターとボタン */
+/* フッターとボタン（更新） */
 footer {
+    position: fixed; /* 画面下部に固定 */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box; /* paddingをwidthに含める */
+
     display: flex;
     justify-content: space-around;
     padding: 1rem;
+    /* iPhoneのノッチなどのセーフエリアを考慮 */
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+
+    background-color: #f8f8f8cc; /* ヘッダーとスタイルを統一 */
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-top: 1px solid #dcdcdc;
 }
 button {
     padding: 0.6rem 1.5rem;
