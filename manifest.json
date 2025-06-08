@@ -1,15 +1,15 @@
 {
   "name": "男女平等アプリ",
   "short_name": "男女平等",
-  "scope": "/danjobyodo-app/"
+  "scope": "/danjobyodo-app/",
   "start_url": "/danjobyodo-app/",
   "display": "standalone",
-  "background_color": "#f0f0f0",
+  "background_color": "#f2f2f7",
   "theme_color": "#f8f8f8",
   "description": "男女平等を実践するアプリです。",
   "icons": [
     {
-      "src": "images/icon-512x512.png",
+      "src": "/danjobyodo-app/images/icon-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
