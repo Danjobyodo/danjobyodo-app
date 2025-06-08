@@ -1,4 +1,3 @@
-// DOMが完全に読み込まれたら実行
 document.addEventListener('DOMContentLoaded', () => {
     // --- 状態の初期化 ---
     if (localStorage.getItem('byodo1') === null) {
