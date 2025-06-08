@@ -9,7 +9,7 @@
   "description": "男女平等を実践するアプリです。",
   "icons": [
     {
-      "src": "/danjobyodo-app/images/icon-512x512.png",
+      "src": "/danjobyodo-app/images/icon-byodo512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
