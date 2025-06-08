@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>男女平等</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="manifest" href="manifest.json">
+    <!-- ↓ すべてのパスを絶対パスに修正 -->
+    <link rel="stylesheet" href="/danjobyodo-app/style.css">
+    <link rel="manifest" href="/danjobyodo-app/manifest.json">
     <meta name="theme-color" content="#f8f8f8">
-    <link rel="apple-touch-icon" href="images/icon-512x512.png">
-    <link rel="icon" href="images/icon-512x512.png" type="image/png">
+    <link rel="apple-touch-icon" href="/danjobyodo-app/images/icon-512x512.png">
+    <link rel="icon" href="/danjobyodo-app/images/icon-512x512.png" type="image/png">
 </head>
 <body>
     <header>
@@ -16,10 +17,21 @@
     </header>
     <main>
         <ul class="list">
-            <li><a href="page1.html">男女平等1</a></li>
-            <li><a href="page2.html">男女平等2</a></li>
+            <!-- ↓ すべてのリンクを絶対パスに修正 -->
+            <li><a href="/danjobyodo-app/page1.html">男女平等1</a></li>
+            <li><a href="/danjobyodo-app/page2.html">男女平等2</a></li>
         </ul>
     </main>
-    <script src="main.js"></script>
+    <script src="/danjobyodo-app/main.js"></script>
+    <!-- ↓ Service Worker登録コードを追加 -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/danjobyodo-app/sw.js', { scope: '/danjobyodo-app/' })
+            .then(reg => console.log('SW registered: ', reg))
+            .catch(err => console.log('SW registration failed: ', err));
+        });
+      }
+    </script>
 </body>
 </html>
