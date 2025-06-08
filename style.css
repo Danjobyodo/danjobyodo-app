@@ -1,0 +1,151 @@
+/* 基本設定 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    background-color: #f2f2f7; /* iOSの背景色に近い色 */
+    color: #1c1c1e;
+}
+
+/* ヘッダー */
+header {
+    background-color: #f8f8f8cc; /* 半透明の背景 */
+    padding: 1rem;
+    border-bottom: 1px solid #dcdcdc;
+    text-align: center;
+    position: relative;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+h1 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+.back-link {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    text-decoration: none;
+    color: #007aff;
+    font-size: 1rem;
+}
+
+/* メインコンテンツ */
+main {
+    padding: 1rem;
+}
+.content-v-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+    text-align: center;
+}
+
+/* リスト */
+.list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.list li {
+    padding-left: 1rem;
+    position: relative;
+}
+.list li:not(:last-child) {
+    border-bottom: 1px solid #e5e5ea;
+}
+.list a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    padding: 0.8rem 2rem 0.8rem 0; /* 右側に矢印用のスペース */
+}
+/* リストの矢印 > */
+.list a::after {
+    content: '›';
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #c7c7cc;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* フッターとボタン */
+footer {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
+button {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #007aff;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+button.destructive {
+    background-color: #ff3b30;
+}
+button.destructive:hover {
+    background-color: #c50f05;
+}
+
+/* テキストスタイル */
+.byodo-text-style {
+    font-size: 1.5rem;
+    min-height: 2rem; /* テキストがなくても高さを確保 */
+    margin-bottom: 2rem;
+}
+
+/* トグルスイッチ */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    background-color: #fff;
+    padding: 0.8rem 1rem;
+    border-radius: 10px;
+}
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 51px;
+    height: 31px;
+    margin-left: 1rem;
+}
+.switch input { display: none; }
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background-color: #e9e9eb;
+    transition: .4s;
+    border-radius: 34px;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 27px; width: 27px;
+    left: 2px; bottom: 2px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+input:checked + .slider { background-color: #34c759; }
+input:checked + .slider:before { transform: translateX(20px); }
