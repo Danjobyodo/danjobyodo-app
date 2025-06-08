@@ -1,6 +1,7 @@
 {
   "name": "男女平等アプリ",
   "short_name": "男女平等",
+  "scope": "/danjobyodo-app/"
   "start_url": "index.html",
   "display": "standalone",
   "background_color": "#f0f0f0",
