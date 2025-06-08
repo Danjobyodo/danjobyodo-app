@@ -1,4 +1,4 @@
-const CACHE_NAME = 'danjo-byodo-app-cache-v3';
+const CACHE_NAME = 'danjobyodo-app-cache-v3';
 
 const urlsToCache = [
   '/danjobyodo-app/',
