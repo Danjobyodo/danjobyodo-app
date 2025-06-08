@@ -1,5 +1,5 @@
-const CACHE_NAME = 'danjo-byodo-app-cache-v2'; // バージョンを更新
-// キャッシュするファイルを絶対パスで明記
+const CACHE_NAME = 'danjo-byodo-app-cache-v2';
+
 const urlsToCache = [
   '/danjobyodo-app/',
   '/danjobyodo-app/index.html',
@@ -8,10 +8,9 @@ const urlsToCache = [
   '/danjobyodo-app/detail.html',
   '/danjobyodo-app/style.css',
   '/danjobyodo-app/main.js',
-  '/danjobyodo-app/images/icon-512x512.png'
+  '/danjobyodo-app/images/icon-byodo512x512.png'
 ];
 
-// インストール時にファイルをキャッシュする
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -22,12 +21,10 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// リクエスト時にキャッシュを返す
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
-        // キャッシュがあればそれを返し、なければネットワークから取得する
         return response || fetch(event.request);
       })
   );
